@@ -18,9 +18,15 @@
 
 
 ## how to use
-- pull from docker hub's build of this repository:
-    - `docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d justin2004/mssql_server_tiny`
-- or build this image yourself
+docker-compose.yml:
+
+```yml
+services:
+  mssql:
+#    image: bitwarden/mssql:2022.5.1
+    image: aimkiray/mssql_server_tiny:latest
+    container_name: bitwarden-mssql
+```
 
 
 ---
